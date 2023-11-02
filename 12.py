@@ -26,21 +26,14 @@ def count2(n): # more efficient (there is a error, it should be corrected)
 def count3(n): # more efficient
     count = 0
     i = 1
-    k = n
-
-    if (n == 1):
-        return 1
-    else:
-        while (i < k):
-            if (n%i == 0):
-                k = n/i
-                if (i == k):
-                    count += 1
-                else:
-                    count += 2
-            i = i + 1
-
-        return count
+    while (i*i <= n):
+        k = n//i
+        if (i == k):
+            count += 1
+        else:
+            count += 2
+        i += 1
+    return count
 
 
 if __name__ == "__main__":
